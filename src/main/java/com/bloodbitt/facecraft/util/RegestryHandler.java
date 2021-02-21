@@ -3,6 +3,7 @@ package com.bloodbitt.facecraft.util;
 import com.bloodbitt.facecraft.FaceCraft;
 import com.bloodbitt.facecraft.blocks.BlockItemBase;
 import com.bloodbitt.facecraft.blocks.FaceBlock;
+import com.bloodbitt.facecraft.blocks.FaceOre;
 import com.bloodbitt.facecraft.items.ItemBase;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -28,9 +29,11 @@ public class RegestryHandler
 
     //blocks
     public static final RegistryObject<Block> FACE_BLOCK = BLOCKS.register("face_block", FaceBlock::new);
+    public static final RegistryObject<Block> FACE_ORE = BLOCKS.register("face_ore", FaceOre::new);
 
     //block items
     public static final RegistryObject<Item> FACE_BLOCK_ITEM = ITEMS.register("face_block", () -> new BlockItemBase(FACE_BLOCK.get()));
+    public static final RegistryObject<Item> FACE_ORE_ITEM = ITEMS.register("face_ore", () -> new BlockItemBase(FACE_ORE.get()));
 
 
 }
