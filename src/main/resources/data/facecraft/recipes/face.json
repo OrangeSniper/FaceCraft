@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "iii",
+    "lsl",
+    "lll"
+  ],
+  "key":
+  {
+    "s":
+    {
+      "item": "minecraft:soul_sand"
+    },
+    "l":
+    {
+      "item": "minecraft:leather"
+    },
+    "i":
+    {
+      "item": "minecraft:ink_sac"
+    }
+  },
+  "result":
+  {
+    "item": "facecraft:face",
+    "count": 1
+  }
+}
