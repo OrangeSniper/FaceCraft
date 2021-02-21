@@ -9,6 +9,25 @@
           "children": [
             {
               "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "name": "facecraft:face_ore"
+            },
+            {
+              "type": "minecraft:item",
               "functions": [
                 {
                   "function": "minecraft:set_count",
@@ -27,7 +46,7 @@
                     }
                   }
               ],
-              "name": "facecraft:face"
+              "name": "facecraft:face_ore"
             }
           ]
         }
