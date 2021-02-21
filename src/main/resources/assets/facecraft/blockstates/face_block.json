@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "facecraft:block/face_block" }
+  }
+}

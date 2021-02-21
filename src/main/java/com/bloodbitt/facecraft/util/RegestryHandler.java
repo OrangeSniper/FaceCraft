@@ -1,6 +1,7 @@
 package com.bloodbitt.facecraft.util;
 
 import com.bloodbitt.facecraft.FaceCraft;
+import com.bloodbitt.facecraft.blocks.BlockItemBase;
 import com.bloodbitt.facecraft.blocks.FaceBlock;
 import com.bloodbitt.facecraft.items.ItemBase;
 import net.minecraft.block.Block;
@@ -29,6 +30,7 @@ public class RegestryHandler
     public static final RegestryObject<Block> FACE_BLOCK = BLOCKS.register("face_block", FaceBlock::new);
 
     //block items
+    public static final RegestryObject<Item> FACE_BLOCK_ITEM = ITEMS.register("face_block", () -> new BlockItemBase(FACE_BLOCK.get()));
 
 
 }
