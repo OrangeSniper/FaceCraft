@@ -27,10 +27,10 @@ public class RegestryHandler
     public static final RegistryObject<Item> FACE = ITEMS.register("face", ItemBase::new);
 
     //blocks
-    public static final RegestryObject<Block> FACE_BLOCK = BLOCKS.register("face_block", FaceBlock::new);
+    public static final RegistryObject<Block> FACE_BLOCK = BLOCKS.register("face_block", FaceBlock::new);
 
     //block items
-    public static final RegestryObject<Item> FACE_BLOCK_ITEM = ITEMS.register("face_block", () -> new BlockItemBase(FACE_BLOCK.get()));
+    public static final RegistryObject<Item> FACE_BLOCK_ITEM = ITEMS.register("face_block", () -> new BlockItemBase(FACE_BLOCK.get()));
 
 
 }
