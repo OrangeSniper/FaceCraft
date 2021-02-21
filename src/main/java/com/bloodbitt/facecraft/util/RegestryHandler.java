@@ -1,6 +1,7 @@
 package com.bloodbitt.facecraft.util;
 
 import com.bloodbitt.facecraft.FaceCraft;
+import com.bloodbitt.facecraft.blocks.FaceBlock;
 import com.bloodbitt.facecraft.items.ItemBase;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
