@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "facecraft:face_ore"
+  },
+  "result": "facecraft:face",
+  "experience": 1.0,
+  "cookingtime": 200
+}
