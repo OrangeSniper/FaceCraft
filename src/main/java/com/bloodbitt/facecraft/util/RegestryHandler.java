@@ -5,8 +5,10 @@ import com.bloodbitt.facecraft.blocks.BlockItemBase;
 import com.bloodbitt.facecraft.blocks.FaceBlock;
 import com.bloodbitt.facecraft.blocks.FaceOre;
 import com.bloodbitt.facecraft.items.ItemBase;
+import com.bloodbitt.facecraft.tools.FaceItemTier;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.SwordItem;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -26,6 +28,10 @@ public class RegestryHandler
 
     //items
     public static final RegistryObject<Item> FACE = ITEMS.register("face", ItemBase::new);
+
+    //tools
+    public static final RegistryObject<SwordItem> FACE_SWORD = ITEMS.register("face_sword", () ->
+            new SwordItem(FaceItemTier.FACE, 3, -2.4f, new Item.Properties().group(FaceCraft.TAB)));
 
     //blocks
     public static final RegistryObject<Block> FACE_BLOCK = BLOCKS.register("face_block", FaceBlock::new);
