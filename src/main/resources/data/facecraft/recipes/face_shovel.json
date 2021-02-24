@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    " f ",
+    " s ",
+    " s "
+  ],
+  "key":
+  {
+    "f":
+    {
+      "item": "facecraft:face"
+    },
+    "s":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "facecraft:face_shovel",
+    "count": 1
+  }
+}

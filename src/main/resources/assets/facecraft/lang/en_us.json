@@ -3,5 +3,9 @@
   "itemGroup.FaceTab": "Face Craft",
   "block.facecraft.face_block": "Block of Face",
   "block.facecraft.face_ore": "Face Ore",
-  "item.facecraft.face_sword": "Face Sword"
+  "item.facecraft.face_sword": "Face Sword",
+  "item.facecraft.face_pickaxe": "Face Pickaxe",
+  "item.facecraft.face_axe": "Face Axe",
+  "item.facecraft.face_shovel": "Face Shovel",
+  "item.facecraft.face_hoe": "Face Hoe"
 }

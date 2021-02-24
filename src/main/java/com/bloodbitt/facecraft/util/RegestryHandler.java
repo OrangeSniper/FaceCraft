@@ -7,8 +7,7 @@ import com.bloodbitt.facecraft.blocks.FaceOre;
 import com.bloodbitt.facecraft.items.ItemBase;
 import com.bloodbitt.facecraft.tools.FaceItemTier;
 import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.item.SwordItem;
+import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -32,6 +31,15 @@ public class RegestryHandler
     //tools
     public static final RegistryObject<SwordItem> FACE_SWORD = ITEMS.register("face_sword", () ->
             new SwordItem(FaceItemTier.FACE, 3, -2.4f, new Item.Properties().group(FaceCraft.TAB)));
+    public static final RegistryObject<PickaxeItem> FACE_PICKAXE = ITEMS.register("face_pickaxe", () ->
+            new PickaxeItem(FaceItemTier.FACE, 0, -2.8f, new Item.Properties().group(FaceCraft.TAB)));
+    public static final RegistryObject<AxeItem> FACE_AXE = ITEMS.register("face_axe", () ->
+            new AxeItem(FaceItemTier.FACE, 5, -3.6f, new Item.Properties().group(FaceCraft.TAB)));
+    public static final RegistryObject<ShovelItem> FACE_SHOVEL = ITEMS.register("face_shovel", () ->
+            new ShovelItem(FaceItemTier.FACE, 0, -2.9f, new Item.Properties().group(FaceCraft.TAB)));
+    public static final RegistryObject<HoeItem> FACE_HOE = ITEMS.register("face_hoe", () ->
+            new HoeItem(FaceItemTier.FACE, -1f, new Item.Properties().group(FaceCraft.TAB)));
+
 
     //blocks
     public static final RegistryObject<Block> FACE_BLOCK = BLOCKS.register("face_block", FaceBlock::new);

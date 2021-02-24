@@ -1,6 +1,8 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/cube_bottom_top",
   "textures": {
-    "all": "facecraft:blocks/face_block"
+    "side": "facecraft:blocks/face_block",
+    "top": "facecraft:blocks/face_block_top",
+    "bottom": "facecraft:blocks/face_block_bottom"
   }
 }
