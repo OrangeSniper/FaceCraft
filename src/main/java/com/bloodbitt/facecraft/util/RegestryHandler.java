@@ -1,12 +1,14 @@
 package com.bloodbitt.facecraft.util;
 
 import com.bloodbitt.facecraft.FaceCraft;
+import com.bloodbitt.facecraft.armor.ModArmorMaterial;
 import com.bloodbitt.facecraft.blocks.BlockItemBase;
 import com.bloodbitt.facecraft.blocks.FaceBlock;
 import com.bloodbitt.facecraft.blocks.FaceOre;
 import com.bloodbitt.facecraft.items.ItemBase;
 import com.bloodbitt.facecraft.tools.FaceItemTier;
 import net.minecraft.block.Block;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -40,6 +42,14 @@ public class RegestryHandler
     public static final RegistryObject<HoeItem> FACE_HOE = ITEMS.register("face_hoe", () ->
             new HoeItem(FaceItemTier.FACE, -1f, new Item.Properties().group(FaceCraft.TAB)));
 
+    //armor
+    public static final RegistryObject<ArmorItem> FACE_HELMET = ITEMS.register("face_helmet", () -> new ArmorItem(ModArmorMaterial.FACE, EquipmentSlotType.HEAD, new Item.Properties().group(FaceCraft.TAB)));
+
+    public static final RegistryObject<ArmorItem> FACE_CHESTPLATE = ITEMS.register("face_chestplate", () -> new ArmorItem(ModArmorMaterial.FACE, EquipmentSlotType.CHEST, new Item.Properties().group(FaceCraft.TAB)));
+
+    public static final RegistryObject<ArmorItem> FACE_LEGGINGS = ITEMS.register("face_leggings", () -> new ArmorItem(ModArmorMaterial.FACE, EquipmentSlotType.LEGS, new Item.Properties().group(FaceCraft.TAB)));
+
+    public static final RegistryObject<ArmorItem> FACE_BOOTS = ITEMS.register("face_boots", () -> new ArmorItem(ModArmorMaterial.FACE, EquipmentSlotType.FEET, new Item.Properties().group(FaceCraft.TAB)));
 
     //blocks
     public static final RegistryObject<Block> FACE_BLOCK = BLOCKS.register("face_block", FaceBlock::new);
