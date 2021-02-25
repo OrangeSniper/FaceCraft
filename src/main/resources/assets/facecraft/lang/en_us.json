@@ -1,11 +1,15 @@
 {
-  "item.facecraft.face": "Face",
+  "item.facecraft.face": "Face of the Damned",
   "itemGroup.FaceTab": "Face Craft",
-  "block.facecraft.face_block": "Block of Face",
-  "block.facecraft.face_ore": "Face Ore",
-  "item.facecraft.face_sword": "Face Sword",
-  "item.facecraft.face_pickaxe": "Face Pickaxe",
-  "item.facecraft.face_axe": "Face Axe",
-  "item.facecraft.face_shovel": "Face Shovel",
-  "item.facecraft.face_hoe": "Face Hoe"
+  "block.facecraft.face_block": "Block of Deadly Visages",
+  "block.facecraft.face_ore": "Ore of the Damned",
+  "item.facecraft.face_sword": "Sword of Terrible Tears",
+  "item.facecraft.face_pickaxe": "Pick of Stones' bane",
+  "item.facecraft.face_axe": "Hatchet of Crying Trees",
+  "item.facecraft.face_shovel": "Spade of Gone Too Soon",
+  "item.facecraft.face_hoe": "Hoe of the Horrid Farmer",
+  "item.facecraft.face_helmet": "Mask of Eternal Damnation",
+  "item.facecraft.face_chestplate": "Breastplate of Eternal Observation",
+  "item.facecraft.face_leggings": "Pants of Aversion",
+  "item.facecraft.face_boots": "Boots of the Blood-trials"
 }
