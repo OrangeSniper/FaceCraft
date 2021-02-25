@@ -1,7 +1,7 @@
 package com.bloodbitt.facecraft.tools;
 
 import com.bloodbitt.facecraft.util.RegestryHandler;
-import com.google.common.base.Supplier;
+import java.util.function.Supplier;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
 
