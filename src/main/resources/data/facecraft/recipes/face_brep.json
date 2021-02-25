@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "facecraft:face_block"
+    }
+  ],
+  "result":
+  {
+    "item": "facecraft:face",
+    "count": 9
+  }
+}
