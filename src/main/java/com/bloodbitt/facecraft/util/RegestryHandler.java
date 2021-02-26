@@ -5,6 +5,7 @@ import com.bloodbitt.facecraft.armor.ModArmorMaterial;
 import com.bloodbitt.facecraft.blocks.BlockItemBase;
 import com.bloodbitt.facecraft.blocks.FaceBlock;
 import com.bloodbitt.facecraft.blocks.FaceOre;
+import com.bloodbitt.facecraft.items.FlameApple;
 import com.bloodbitt.facecraft.items.ItemBase;
 import com.bloodbitt.facecraft.tools.FaceItemTier;
 import net.minecraft.block.Block;
@@ -14,6 +15,8 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+
+import java.rmi.registry.RegistryHandler;
 
 public class RegestryHandler
 {
@@ -29,6 +32,7 @@ public class RegestryHandler
 
     //items
     public static final RegistryObject<Item> FACE = ITEMS.register("face", ItemBase::new);
+    public static final RegistryObject<FlameApple> FLAME_APPLE = ITEMS.register("flame_apple", FlameApple::new);
 
     //tools
     public static final RegistryObject<SwordItem> FACE_SWORD = ITEMS.register("face_sword", () ->
