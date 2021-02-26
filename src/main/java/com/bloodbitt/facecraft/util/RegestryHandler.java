@@ -18,8 +18,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class RegestryHandler
 {
 
-    public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, FaceCraft.MOD_ID);
-    public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, FaceCraft.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FaceCraft.MOD_ID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, FaceCraft.MOD_ID);
 
     public static void init()
     {
@@ -40,7 +40,7 @@ public class RegestryHandler
     public static final RegistryObject<ShovelItem> FACE_SHOVEL = ITEMS.register("face_shovel", () ->
             new ShovelItem(FaceItemTier.FACE, 0, -2.9f, new Item.Properties().group(FaceCraft.TAB)));
     public static final RegistryObject<HoeItem> FACE_HOE = ITEMS.register("face_hoe", () ->
-            new HoeItem(FaceItemTier.FACE, -1f, new Item.Properties().group(FaceCraft.TAB)));
+            new HoeItem(FaceItemTier.FACE, 0, -1f, new Item.Properties().group(FaceCraft.TAB)));
 
     //armor
     public static final RegistryObject<ArmorItem> FACE_HELMET = ITEMS.register("face_helmet", () -> new ArmorItem(ModArmorMaterial.FACE, EquipmentSlotType.HEAD, new Item.Properties().group(FaceCraft.TAB)));
