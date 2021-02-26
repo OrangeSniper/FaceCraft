@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "i i",
+    "lfl",
+    "lll"
+  ],
+  "key":
+  {
+    "f":
+    {
+      "item": "facecraft:face"
+    },
+    "l":
+    {
+      "item": "minecraft:leather"
+    },
+    "i":
+    {
+      "item": "minecraft:ink_sac"
+    }
+  },
+  "result":
+  {
+    "item": "facecraft:face_chestplate",
+    "count": 1
+  }
+}

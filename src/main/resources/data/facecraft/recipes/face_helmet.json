@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "   ",
+    "sfs",
+    "   "
+  ],
+  "key":
+  {
+    "f":
+    {
+      "item": "facecraft:face"
+    },
+    "s":
+    {
+      "item": "minecraft:string"
+    }
+  },
+  "result":
+  {
+    "item": "facecraft:face_helmet",
+    "count": 1
+  }
+}

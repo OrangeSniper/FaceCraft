@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "   ",
+    "f f",
+    "l l"
+  ],
+  "key":
+  {
+    "f":
+    {
+      "item": "facecraft:face"
+    },
+    "l":
+    {
+      "item": "minecraft:leather"
+    },
+    "i":
+    {
+      "item": "minecraft:ink_sac"
+    }
+  },
+  "result":
+  {
+    "item": "facecraft:boots",
+    "count": 1
+  }
+}
