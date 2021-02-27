@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "facecraft:block/oven" },
+    "facing=south": { "model": "facecraft:block/oven", "y":  180},
+    "facing=west": { "model": "facecraft:block/oven", "y":  270},
+    "facing=east": { "model": "facecraft:block/oven", "y":  90}
+  }
+}

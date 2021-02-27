@@ -1,6 +1,6 @@
 modLoader="javafml" #mandatory
 loaderVersion="[31,)"
-issueTrackerURL="http://my.issue.tracker/" #optional
+issueTrackerURL="https://github.com/OrangeSniper/FaceCraft/issues" #optional
 
 [[mods]]
 modId="facecraft" #mandatory
@@ -11,7 +11,7 @@ displayName="Face Craft" #mandatory
 
 updateJSONURL="http://myurl.me/" #optional
 
-displayURL="http://example.com/" #optional
+displayURL="https://github.com/OrangeSniper/FaceCraft" #optional
 
 logoFile="examplemod.png" #optional
 

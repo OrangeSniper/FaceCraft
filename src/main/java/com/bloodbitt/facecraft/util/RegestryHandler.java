@@ -5,6 +5,7 @@ import com.bloodbitt.facecraft.armor.ModArmorMaterial;
 import com.bloodbitt.facecraft.blocks.BlockItemBase;
 import com.bloodbitt.facecraft.blocks.FaceBlock;
 import com.bloodbitt.facecraft.blocks.FaceOre;
+import com.bloodbitt.facecraft.blocks.Oven;
 import com.bloodbitt.facecraft.items.FlameApple;
 import com.bloodbitt.facecraft.items.ItemBase;
 import com.bloodbitt.facecraft.tools.FaceItemTier;
@@ -58,10 +59,12 @@ public class RegestryHandler
     //blocks
     public static final RegistryObject<Block> FACE_BLOCK = BLOCKS.register("face_block", FaceBlock::new);
     public static final RegistryObject<Block> FACE_ORE = BLOCKS.register("face_ore", FaceOre::new);
+    public static final RegistryObject<Block> OVEN = BLOCKS.register("oven", Oven::new);
 
     //block items
     public static final RegistryObject<Item> FACE_BLOCK_ITEM = ITEMS.register("face_block", () -> new BlockItemBase(FACE_BLOCK.get()));
     public static final RegistryObject<Item> FACE_ORE_ITEM = ITEMS.register("face_ore", () -> new BlockItemBase(FACE_ORE.get()));
+    public static final RegistryObject<Item> OVEN_ITEM = ITEMS.register("oven", () -> new BlockItemBase(OVEN.get()));
 
 
 }
