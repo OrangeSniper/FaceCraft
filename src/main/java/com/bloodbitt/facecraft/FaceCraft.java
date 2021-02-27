@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 @Mod("facecraft")
 public class FaceCraft
 {
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "facecraft";
 
     public FaceCraft() {

@@ -14,11 +14,11 @@
     },
     "l":
     {
-      "item": "minecraft:leather"
+      "tag": "forge:leather"
     },
     "i":
     {
-      "item": "minecraft:ink_sac"
+      "tag": "forge:dyes/black"
     }
   },
   "result":

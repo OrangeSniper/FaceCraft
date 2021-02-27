@@ -5,7 +5,7 @@ issueTrackerURL="https://github.com/OrangeSniper/FaceCraft/issues" #optional
 [[mods]]
 modId="facecraft" #mandatory
 
-version="1.16.1-1.0.0" #mandatory
+version="1.16.1-1.2.0" #mandatory
 
 displayName="Face Craft" #mandatory
 
@@ -38,6 +38,6 @@ I like faces :3
 [[dependencies.examplemod]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.15.2]"
+    versionRange="[1.16.4]"
     ordering="NONE"
     side="BOTH"
