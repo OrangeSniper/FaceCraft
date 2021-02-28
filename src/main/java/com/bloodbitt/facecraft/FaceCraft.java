@@ -1,6 +1,7 @@
 package com.bloodbitt.facecraft;
 
-import com.bloodbitt.facecraft.util.RegestryHandler;
+import com.bloodbitt.facecraft.init.ModBlocks;
+import com.bloodbitt.facecraft.init.ModItems;
 import com.bloodbitt.facecraft.world.gen.ModOreGen;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -21,8 +22,8 @@ public class FaceCraft
     public FaceCraft() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
-
-        RegestryHandler.init();
+        ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -42,7 +43,7 @@ public class FaceCraft
         @Override
         public ItemStack createIcon()
         {
-            return new ItemStack(RegestryHandler.FACE.get());
+            return new ItemStack(ModItems.FACE.get());
         }
     };
 }

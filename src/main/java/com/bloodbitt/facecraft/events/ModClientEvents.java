@@ -1,7 +1,8 @@
 package com.bloodbitt.facecraft.events;
 
 import com.bloodbitt.facecraft.FaceCraft;
-import com.bloodbitt.facecraft.util.RegestryHandler;
+import com.bloodbitt.facecraft.init.ModBlocks;
+import com.bloodbitt.facecraft.init.ModItems;
 import net.minecraft.client.gui.screen.inventory.CraftingScreen;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.Items;
@@ -22,13 +23,13 @@ public class ModClientEvents {
         if(player.getHeldItemMainhand().getItem() == Items.STICK) {
             FaceCraft.LOGGER.info("player tried to jump with stick");
             World world = player.getEntityWorld();
-            world.setBlockState(player.getPosition().add(0, -1, 0), RegestryHandler.FACE_BLOCK.get().getDefaultState());
+            world.setBlockState(player.getPosition().add(0, -1, 0), ModBlocks.FACE_BLOCK.get().getDefaultState());
         }
     }
 
     @SubscribeEvent
     public static void OnHitWithFlameApple(AttackEntityEvent event) {
-        if(event.getEntityLiving().getHeldItemMainhand().getItem() == RegestryHandler.FLAME_APPLE.get()) {
+        if(event.getEntityLiving().getHeldItemMainhand().getItem() == ModItems.FLAME_APPLE.get()) {
             if(event.getTarget().isAlive()) {
                 LivingEntity target = (LivingEntity)event.getTarget();
                 target.setFire(5);

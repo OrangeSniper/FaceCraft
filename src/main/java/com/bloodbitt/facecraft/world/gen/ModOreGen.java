@@ -1,8 +1,6 @@
 package com.bloodbitt.facecraft.world.gen;
 import com.bloodbitt.facecraft.FaceCraft;
-import com.bloodbitt.facecraft.util.RegestryHandler;
-import net.minecraft.block.Blocks;
-import net.minecraft.item.Items;
+import com.bloodbitt.facecraft.init.ModBlocks;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
@@ -11,7 +9,6 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.IFeatureConfig;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
-import net.minecraft.world.gen.feature.template.BlockMatchRuleTest;
 import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -39,7 +36,7 @@ public class ModOreGen {
 
         //Overworld Ore Register
         overworldOres.add(register("face_ore", Feature.ORE.withConfiguration(new OreFeatureConfig(
-                OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegestryHandler.FACE_ORE.get().getDefaultState(), 6)) //Vein Size
+                OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, ModBlocks.FACE_ORE.get().getDefaultState(), 6)) //Vein Size
                 .range(64).square() //Spawn height start
                 .func_242731_b(50))); //Chunk spawn frequency
     }

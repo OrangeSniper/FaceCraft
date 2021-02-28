@@ -1,34 +1,19 @@
-package com.bloodbitt.facecraft.util;
+package com.bloodbitt.facecraft.init;
 
 import com.bloodbitt.facecraft.FaceCraft;
-import com.bloodbitt.facecraft.util.enums.ModArmorMaterial;
 import com.bloodbitt.facecraft.blocks.BlockItemBase;
-import com.bloodbitt.facecraft.blocks.FaceBlock;
-import com.bloodbitt.facecraft.blocks.FaceOre;
-import com.bloodbitt.facecraft.blocks.Oven;
 import com.bloodbitt.facecraft.items.FlameApple;
 import com.bloodbitt.facecraft.items.ItemBase;
 import com.bloodbitt.facecraft.util.enums.FaceItemTier;
-import net.minecraft.block.Block;
+import com.bloodbitt.facecraft.util.enums.ModArmorMaterial;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class RegestryHandler
-{
-
+public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FaceCraft.MOD_ID);
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, FaceCraft.MOD_ID);
-
-    public static void init()
-    {
-        ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
-    }
-
     //items
     public static final RegistryObject<Item> FACE = ITEMS.register("face", ItemBase::new);
     public static final RegistryObject<FlameApple> FLAME_APPLE = ITEMS.register("flame_apple", FlameApple::new);
@@ -54,15 +39,8 @@ public class RegestryHandler
 
     public static final RegistryObject<ArmorItem> FACE_BOOTS = ITEMS.register("face_boots", () -> new ArmorItem(ModArmorMaterial.FACE, EquipmentSlotType.FEET, new Item.Properties().group(FaceCraft.TAB)));
 
-    //blocks
-    public static final RegistryObject<Block> FACE_BLOCK = BLOCKS.register("face_block", FaceBlock::new);
-    public static final RegistryObject<Block> FACE_ORE = BLOCKS.register("face_ore", FaceOre::new);
-    public static final RegistryObject<Block> OVEN = BLOCKS.register("oven", Oven::new);
-
     //block items
-    public static final RegistryObject<Item> FACE_BLOCK_ITEM = ITEMS.register("face_block", () -> new BlockItemBase(FACE_BLOCK.get()));
-    public static final RegistryObject<Item> FACE_ORE_ITEM = ITEMS.register("face_ore", () -> new BlockItemBase(FACE_ORE.get()));
-    public static final RegistryObject<Item> OVEN_ITEM = ITEMS.register("oven", () -> new BlockItemBase(OVEN.get()));
-
-
+    public static final RegistryObject<Item> FACE_BLOCK_ITEM = ITEMS.register("face_block", () -> new BlockItemBase(ModBlocks.FACE_BLOCK.get()));
+    public static final RegistryObject<Item> FACE_ORE_ITEM = ITEMS.register("face_ore", () -> new BlockItemBase(ModBlocks.FACE_ORE.get()));
+    public static final RegistryObject<Item> OVEN_ITEM = ITEMS.register("oven", () -> new BlockItemBase(ModBlocks.OVEN.get()));
 }

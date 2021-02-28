@@ -1,8 +1,8 @@
 package com.bloodbitt.facecraft.util.enums;
 
 import com.bloodbitt.facecraft.FaceCraft;
-import com.bloodbitt.facecraft.util.RegestryHandler;
-import net.minecraft.client.audio.Sound;
+import com.bloodbitt.facecraft.init.ModBlocks;
+import com.bloodbitt.facecraft.init.ModItems;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.crafting.Ingredient;
@@ -15,7 +15,7 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements IArmorMaterial {
 
-    FACE(FaceCraft.MOD_ID + ":face", 10, new int[] {1, 3, 5, 1}, 7, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0f, () -> { return Ingredient.fromItems((RegestryHandler.FACE.get())); }, 0);
+    FACE(FaceCraft.MOD_ID + ":face", 10, new int[] {1, 3, 5, 1}, 7, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0f, () -> { return Ingredient.fromItems((ModItems.FACE.get())); }, 0);
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[] {11, 16, 15, 13};
     private final String name;

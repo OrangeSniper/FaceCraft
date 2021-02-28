@@ -1,14 +1,16 @@
 package com.bloodbitt.facecraft.util.enums;
 
-import com.bloodbitt.facecraft.util.RegestryHandler;
+import com.bloodbitt.facecraft.init.ModBlocks;
 import java.util.function.Supplier;
+
+import com.bloodbitt.facecraft.init.ModItems;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
 
 public enum FaceItemTier implements IItemTier {
     //1 + baseDamage + addedDamage
     FACE(2, 170, 4.0f, 2.0f, 7, () -> {
-        return Ingredient.fromItems(RegestryHandler.FACE.get());
+        return Ingredient.fromItems(ModItems.FACE.get());
     });
 
     private final int harvestLevel;
