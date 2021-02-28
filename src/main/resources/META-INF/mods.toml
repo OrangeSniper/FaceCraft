@@ -6,7 +6,7 @@ license="MIT License"
 [[mods]]
 modId="facecraft" #mandatory
 
-version="1.16.4-1.2.0" #mandatory
+version="1.16.4-1.2.1" #mandatory
 
 displayName="Face Craft" #mandatory
 
