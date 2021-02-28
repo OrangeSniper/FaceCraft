@@ -13,5 +13,6 @@
   "item.facecraft.face_leggings": "Pants of Aversion",
   "item.facecraft.face_boots": "Boots of the Blood-trials",
   "item.facecraft.flame_apple": "Flame Apple",
-  "block.facecraft.oven": "Oven"
+  "block.facecraft.oven": "Oven",
+  "entity.facecraft.face_demon": "Face Demon"
 }
