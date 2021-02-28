@@ -1,4 +1,4 @@
-package com.bloodbitt.facecraft.armor;
+package com.bloodbitt.facecraft.util.enums;
 
 import com.bloodbitt.facecraft.FaceCraft;
 import com.bloodbitt.facecraft.util.RegestryHandler;

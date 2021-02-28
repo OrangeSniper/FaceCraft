@@ -1,4 +1,4 @@
-package com.bloodbitt.facecraft.tools;
+package com.bloodbitt.facecraft.util.enums;
 
 import com.bloodbitt.facecraft.util.RegestryHandler;
 import java.util.function.Supplier;
