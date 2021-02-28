@@ -1,44 +1,69 @@
 package com.bloodbitt.facecraft.world.gen;
-
 import com.bloodbitt.facecraft.FaceCraft;
 import com.bloodbitt.facecraft.util.RegestryHandler;
-import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.item.Items;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.IFeatureConfig;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
-import net.minecraft.world.gen.placement.ConfiguredPlacement;
-import net.minecraft.world.gen.placement.CountRangeConfig;
-import net.minecraft.world.gen.placement.Placement;
+import net.minecraft.world.gen.feature.template.BlockMatchRuleTest;
+import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
-import net.minecraftforge.registries.ForgeRegistries;
+import java.util.ArrayList;
 
-@Mod.EventBusSubscriber(modid = FaceCraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+/**
+ * Ore generation
+ * @author TechOFreak
+ *
+ */
+
+@Mod.EventBusSubscriber
 public class ModOreGen {
 
-    @SubscribeEvent
-    public static void GenerateOres(FMLLoadCompleteEvent event) {
-        for(Biome biome : ForgeRegistries.BIOMES) {
-            //Neather generation
-            if(biome.getCategory() == Biome.Category.NETHER) {
+    private static final ArrayList<ConfiguredFeature<?, ?>> overworldOres = new ArrayList<ConfiguredFeature<?, ?>>();
+    private static final ArrayList<ConfiguredFeature<?, ?>> netherOres = new ArrayList<ConfiguredFeature<?, ?>>();
+    private static final ArrayList<ConfiguredFeature<?, ?>> endOres = new ArrayList<ConfiguredFeature<?, ?>>();
 
-            //end generation
-            }else if(biome.getCategory() == Biome.Category.THEEND) {
+    public static void registerOres(){
+        //BASE_STONE_OVERWORLD is for generating in stone, granite, diorite, and andesite
+        //NETHERRACK is for generating in netherrack
+        //BASE_STONE_NETHER is for generating in netherrack, basalt and blackstone
 
-            //overworld generation
-            }else {
-                GenOre(biome, 20, 15, 5, 50, OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegestryHandler.FACE_ORE.get().getDefaultState(), 6);
+        //Overworld Ore Register
+        overworldOres.add(register("face_ore", Feature.ORE.withConfiguration(new OreFeatureConfig(
+                OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegestryHandler.FACE_ORE.get().getDefaultState(), 6)) //Vein Size
+                .range(64).square() //Spawn height start
+                .func_242731_b(50))); //Chunk spawn frequency
+    }
+
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    public static void gen(BiomeLoadingEvent event) {
+        BiomeGenerationSettingsBuilder generation = event.getGeneration();
+        if(event.getCategory().equals(Biome.Category.NETHER)){
+            for(ConfiguredFeature<?, ?> ore : netherOres){
+                if (ore != null) generation.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore);
             }
+        }
+        if(event.getCategory().equals(Biome.Category.THEEND)){
+            for(ConfiguredFeature<?, ?> ore : endOres){
+                if (ore != null) generation.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore);
+            }
+        }
+        for(ConfiguredFeature<?, ?> ore : overworldOres){
+            if (ore != null) generation.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore);
         }
     }
 
-    private static void GenOre(Biome biome, int count, int bottomOffset, int topOffset, int max, OreFeatureConfig.FillerBlockType filler, BlockState defaultBlockState, int size) {
-        CountRangeConfig range = new CountRangeConfig(count, bottomOffset, topOffset, max);
-        OreFeatureConfig feature = new OreFeatureConfig(filler, defaultBlockState, size);
-        ConfiguredPlacement config = Placement.COUNT_RANGE.configure(range);
-        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(feature).withPlacement(config));
+    private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String name, ConfiguredFeature<FC, ?> configuredFeature) {
+        return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, FaceCraft.MOD_ID + ":" + name, configuredFeature);
     }
+
 }

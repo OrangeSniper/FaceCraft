@@ -1,6 +1,7 @@
 package com.bloodbitt.facecraft;
 
 import com.bloodbitt.facecraft.util.RegestryHandler;
+import com.bloodbitt.facecraft.world.gen.ModOreGen;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -28,7 +29,7 @@ public class FaceCraft
 
     private void setup(final FMLCommonSetupEvent event)
     {
-
+        ModOreGen.registerOres();
     }
 
     private void doClientStuff(final FMLClientSetupEvent event)

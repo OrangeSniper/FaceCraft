@@ -1,11 +1,12 @@
 modLoader="javafml" #mandatory
 loaderVersion="[31,)"
 issueTrackerURL="https://github.com/OrangeSniper/FaceCraft/issues" #optional
+license="MIT License"
 
 [[mods]]
 modId="facecraft" #mandatory
 
-version="1.16.1-1.2.0" #mandatory
+version="1.16.4-1.2.0" #mandatory
 
 displayName="Face Craft" #mandatory
 
@@ -21,6 +22,7 @@ authors="Bloodbitt" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
 I like faces :3
+
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.examplemod]] #optional
