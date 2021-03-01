@@ -24,7 +24,7 @@ public class ModItems {
     public static final RegistryObject<PickaxeItem> FACE_PICKAXE = ITEMS.register("face_pickaxe", () ->
             new PickaxeItem(FaceItemTier.FACE, 0, -2.8f, new Item.Properties().group(FaceCraft.TAB)));
     public static final RegistryObject<AxeItem> FACE_AXE = ITEMS.register("face_axe", () ->
-            new AxeItem(FaceItemTier.FACE, 5, -3.6f, new Item.Properties().group(FaceCraft.TAB)));
+            new AxeItem(FaceItemTier.FACE, 5, -1f, new Item.Properties().group(FaceCraft.TAB)));
     public static final RegistryObject<ShovelItem> FACE_SHOVEL = ITEMS.register("face_shovel", () ->
             new ShovelItem(FaceItemTier.FACE, 0, -2.9f, new Item.Properties().group(FaceCraft.TAB)));
     public static final RegistryObject<HoeItem> FACE_HOE = ITEMS.register("face_hoe", () ->
