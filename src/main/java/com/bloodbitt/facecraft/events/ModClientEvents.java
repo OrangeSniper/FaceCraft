@@ -18,31 +18,11 @@ import net.minecraftforge.fml.common.Mod;
 public class ModClientEvents {
 
     @SubscribeEvent
-    public static void onJumpWithStick(LivingEvent.LivingJumpEvent event) {
-        LivingEntity player = event.getEntityLiving();
-        if(player.getHeldItemMainhand().getItem() == Items.STICK) {
-            FaceCraft.LOGGER.info("player tried to jump with stick");
-            World world = player.getEntityWorld();
-            world.setBlockState(player.getPosition().add(0, -1, 0), ModBlocks.FACE_BLOCK.get().getDefaultState());
-        }
-    }
-
-    @SubscribeEvent
     public static void OnHitWithFlameApple(AttackEntityEvent event) {
         if(event.getEntityLiving().getHeldItemMainhand().getItem() == ModItems.FLAME_APPLE.get()) {
             if(event.getTarget().isAlive()) {
                 LivingEntity target = (LivingEntity)event.getTarget();
                 target.setFire(5);
-            }
-        }
-    }
-
-    @SubscribeEvent
-    public static void OnCraftingTableOpen(GuiOpenEvent event) {
-        if(event.isCancelable()) {
-            if(event.getGui() instanceof CraftingScreen) {
-                event.setCanceled(true);
-                FaceCraft.LOGGER.info("player tried to open a crafting table. Can't have that, now can we!");
             }
         }
     }
