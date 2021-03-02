@@ -9,5 +9,8 @@ import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 public class FaceLands {
     static final BiomeTemplate FACE_LANDS = new BiomeTemplate(TerraformBiomeBuilder.create()
     .surfaceBuilder(ModSurfaceBuilders.CONFIGURED_FACE_LANDS)
-    .precipitation(Biome.RainType.RAIN));
+    .precipitation(Biome.RainType.RAIN)
+    .category(Biome.Category.PLAINS)
+    .temperature(5f)
+    .scale(1f));
 }
