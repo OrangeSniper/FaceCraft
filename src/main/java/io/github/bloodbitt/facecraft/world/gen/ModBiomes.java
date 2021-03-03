@@ -6,6 +6,7 @@ import net.minecraft.util.RegistryKey;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.fml.RegistryObject;
@@ -16,7 +17,8 @@ public class ModBiomes {
 
     public static final DeferredRegister<Biome> BIOMES = DeferredRegister.create(ForgeRegistries.BIOMES, FaceCraft.MOD_ID);
 
-    private static final RegistryObject<Biome> FACE_LANDS = BIOMES.register("face_lands", FaceLands::makeFaceLands);
+
+    public static final RegistryObject<Biome> FACE_LANDS = BIOMES.register("face_lands", FaceLands::makeFaceLands);
     public static final RegistryKey<Biome> FACE_LANDS_KEY = RegistryKey.getOrCreateKey(
             Registry.BIOME_KEY, new ResourceLocation("facecraft", "face_lands"));
 
