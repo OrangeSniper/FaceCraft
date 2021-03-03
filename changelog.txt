@@ -109,7 +109,7 @@ Build: 1.15.2-31.1.78 - Mon May 11 00:35:20 GMT 2020
 	cpw:
 		Update to newer eventbus, with typetools compatibility with jvms up to j14. No guarantees on actual game compatibility however.
 		
-		Signed-off-by: cpw <cpw+github@weeksfamily.ca>
+		Signed-off-by: cpw <cpw+io.github@weeksfamily.ca>
 
 =========
 Build: 1.15.2-31.1.77 - Wed May 06 20:49:23 GMT 2020
@@ -201,7 +201,7 @@ Build: 1.15.2-31.1.60 - Mon Apr 27 13:55:33 GMT 2020
 	cpw:
 		Remove silly icon override. Squirrels are fun y'all..
 		
-		Signed-off-by: cpw <cpw+github@weeksfamily.ca>
+		Signed-off-by: cpw <cpw+io.github@weeksfamily.ca>
 
 =========
 Build: 1.15.2-31.1.59 - Mon Apr 27 05:10:06 GMT 2020
@@ -231,26 +231,26 @@ Build: 1.15.2-31.1.55 - Mon Apr 27 01:42:42 GMT 2020
 		Handle message display a bit better, try to make the UI tick a bit better.. Still a problem with
 		a modelbake right at the end, happening on the window flip.
 		
-		Signed-off-by: cpw <cpw+github@weeksfamily.ca>
+		Signed-off-by: cpw <cpw+io.github@weeksfamily.ca>
 
 	cpw:
 		Use forge logo as short term window Icon, fix Buffer cast problems for new JDK stupid.
 		
-		Signed-off-by: cpw <cpw+github@weeksfamily.ca>
+		Signed-off-by: cpw <cpw+io.github@weeksfamily.ca>
 
 =========
 Build: 1.15.2-31.1.51 - Sun Apr 26 22:25:05 GMT 2020
 	cpw:
 		merge early startup into main window if used. It seems to work well.. Also ticks window on main thread, so mac compatible now.
 		
-		Signed-off-by: cpw <cpw+github@weeksfamily.ca>
+		Signed-off-by: cpw <cpw+io.github@weeksfamily.ca>
 
 =========
 Build: 1.15.2-31.1.50 - Sat Apr 25 21:55:22 GMT 2020
 	cpw:
 		Update jenkinsfile and gradle for new versions of things..
 		
-		Signed-off-by: cpw <cpw+github@weeksfamily.ca>
+		Signed-off-by: cpw <cpw+io.github@weeksfamily.ca>
 
 =========
 Build: 1.15.2-31.1.49 - Sat Apr 25 02:19:14 GMT 2020
@@ -269,7 +269,7 @@ Build: 1.15.2-31.1.47 - Mon Apr 20 01:37:16 GMT 2020
 		It seems to be fully equivalent in testing, but there may be corner cases, so there is a config to disable, though disabling
 		may break servers, especially those chunkloading fake players.
 		
-		Signed-off-by: cpw <cpw+github@weeksfamily.ca>
+		Signed-off-by: cpw <cpw+io.github@weeksfamily.ca>
 
 =========
 Build: 1.15.2-31.1.46 - Wed Apr 15 17:10:05 GMT 2020
@@ -381,14 +381,14 @@ Build: 1.15.2-31.1.27 - Sat Mar 21 00:06:03 GMT 2020
 	cpw:
 		Fix cycle happening in noteblock even though we're setting the new value as well..
 		
-		Signed-off-by: cpw <cpw+github@weeksfamily.ca>
+		Signed-off-by: cpw <cpw+io.github@weeksfamily.ca>
 
 =========
 Build: 1.15.2-31.1.26 - Fri Mar 20 21:35:06 GMT 2020
 	cpw:
 		Add a progress message for atlas textures. Fills a big time gap on bigger packs.
 		
-		Signed-off-by: cpw <cpw+github@weeksfamily.ca>
+		Signed-off-by: cpw <cpw+io.github@weeksfamily.ca>
 
 =========
 Build: 1.15.2-31.1.25 - Tue Mar 17 09:41:49 GMT 2020
@@ -423,7 +423,7 @@ Build: 1.15.2-31.1.20 - Sun Mar 15 03:29:03 GMT 2020
 		Somewhat restore the loading screen overlay. It seems that once the mojang logo and progress bar
 		start running, I can no longer write to the window, even though I am obviously trying to..
 		
-		Signed-off-by: cpw <cpw+github@weeksfamily.ca>
+		Signed-off-by: cpw <cpw+io.github@weeksfamily.ca>
 
 =========
 Build: 1.15.2-31.1.19 - Wed Mar 11 07:00:30 GMT 2020
@@ -449,7 +449,7 @@ Build: 1.15.2-31.1.16 - Mon Feb 24 03:17:00 GMT 2020
 		
 		This change introduces a mechanism to direct certain packets to only process on one side or another. Invalid sidedness will result in the connection being terminated.
 		
-		Signed-off-by: cpw <cpw+github@weeksfamily.ca>
+		Signed-off-by: cpw <cpw+io.github@weeksfamily.ca>
 
 =========
 Build: 1.15.2-31.1.15 - Sun Feb 23 17:32:42 GMT 2020
