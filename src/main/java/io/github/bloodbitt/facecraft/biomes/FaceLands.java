@@ -30,7 +30,7 @@ public class FaceLands {
     }
 
     public static SurfaceBuilderConfig facelandsConfig = new SurfaceBuilderConfig(ModBlocks.FACE_BLOCK.get().getDefaultState(), ModBlocks.FACE_BLOCK.get().getDefaultState(), ModBlocks.FACE_BLOCK.get().getDefaultState());
-    public static ConfiguredSurfaceBuilder e = new ConfiguredSurfaceBuilder(SurfaceBuilder.BADLANDS, facelandsConfig);
+    public static ConfiguredSurfaceBuilder e = new ConfiguredSurfaceBuilder(SurfaceBuilder.DEFAULT, facelandsConfig);
     public static final ConfiguredSurfaceBuilder<SurfaceBuilderConfig> face_lands = func_244192_a("facelands",  e);
 
 
