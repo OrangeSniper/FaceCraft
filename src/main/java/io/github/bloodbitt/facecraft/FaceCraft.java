@@ -41,7 +41,7 @@ public class FaceCraft
 
     private void setup(final FMLCommonSetupEvent event)
     {
-        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(ModBiomes.FACE_LANDS_KEY, 100));
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(ModBiomes.FACE_LANDS_KEY, 50));
         ModOreGen.registerOres();
         DeferredWorkQueue.runLater(() -> {
             GlobalEntityTypeAttributes.put(ModEntityTypes.FACE_DEMON.get(), Face_Demon_entity.setCustomAttributes().create());

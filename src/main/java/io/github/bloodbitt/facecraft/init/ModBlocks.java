@@ -1,6 +1,7 @@
 package io.github.bloodbitt.facecraft.init;
 
 import io.github.bloodbitt.facecraft.FaceCraft;
+import io.github.bloodbitt.facecraft.blocks.BaldFaceBlock;
 import io.github.bloodbitt.facecraft.blocks.FaceBlock;
 import io.github.bloodbitt.facecraft.blocks.FaceOre;
 import io.github.bloodbitt.facecraft.blocks.Oven;
@@ -17,6 +18,7 @@ public class ModBlocks
     public static final RegistryObject<Block> FACE_BLOCK = BLOCKS.register("face_block", FaceBlock::new);
     public static final RegistryObject<Block> FACE_ORE = BLOCKS.register("face_ore", FaceOre::new);
     public static final RegistryObject<Block> OVEN = BLOCKS.register("oven", Oven::new);
+    public static final RegistryObject<Block> BALD_FACE_BLOCK = BLOCKS.register("bald_face_block", BaldFaceBlock::new);
 
 
 }

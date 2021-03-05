@@ -11,6 +11,7 @@ import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import org.lwjgl.system.CallbackI;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FaceCraft.MOD_ID);
@@ -43,4 +44,5 @@ public class ModItems {
     public static final RegistryObject<Item> FACE_BLOCK_ITEM = ITEMS.register("face_block", () -> new BlockItemBase(ModBlocks.FACE_BLOCK.get()));
     public static final RegistryObject<Item> FACE_ORE_ITEM = ITEMS.register("face_ore", () -> new BlockItemBase(ModBlocks.FACE_ORE.get()));
     public static final RegistryObject<Item> OVEN_ITEM = ITEMS.register("oven", () -> new BlockItemBase(ModBlocks.OVEN.get()));
+    public static final RegistryObject<Item> BALD_FACE_BLOCK_ITEM = ITEMS.register("bald_face_block", () -> new BlockItemBase(ModBlocks.BALD_FACE_BLOCK.get()));
 }
