@@ -62,7 +62,7 @@ public class ModOreGen {
                 if (ore != null) generation.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore);
             }
         }
-        if(event.getName() == new ResourceLocation("facecraft", "face_lands")) {
+        if(event.getName() == new ResourceLocation("facecraft", "face_lands") || event.getName() == new ResourceLocation("facecraft", "face_flats")) {
             for(ConfiguredFeature<?, ?> ore : faceOres) {
                 if (ore != null) generation.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ore);
             }
