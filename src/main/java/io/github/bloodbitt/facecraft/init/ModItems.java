@@ -13,11 +13,14 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.lwjgl.system.CallbackI;
 
+import java.rmi.registry.Registry;
+
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FaceCraft.MOD_ID);
     //items
     public static final RegistryObject<Item> FACE = ITEMS.register("face", ItemBase::new);
     public static final RegistryObject<FlameApple> FLAME_APPLE = ITEMS.register("flame_apple", FlameApple::new);
+    public  static final RegistryObject<Item> INVERTED_FACE = ITEMS.register("inverted_face", ItemBase::new);
 
     //tools
     public static final RegistryObject<SwordItem> FACE_SWORD = ITEMS.register("face_sword", () ->

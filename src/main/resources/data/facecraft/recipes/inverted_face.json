@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    " a ",
+    "afa",
+    " a "
+  ],
+  "key":
+  {
+    "f":
+    {
+      "item": "facecraft:face"
+    },
+    "a":
+    {
+      "item": "facecraft:flame_apple"
+    }
+  },
+  "result":
+  {
+    "item": "facecraft:inverted_face",
+    "count": 1
+  }
+}
