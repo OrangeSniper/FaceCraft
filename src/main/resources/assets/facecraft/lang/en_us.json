@@ -16,5 +16,6 @@
   "block.facecraft.oven": "Oven",
   "entity.facecraft.face_demon": "Face Demon",
   "block.facecraft.bald_face_block": "Block of Balding Visages",
-  "item.facecraft.inverted_face": "Inverted Face"
+  "item.facecraft.inverted_face": "Inverted Face",
+  "tooltip.FaceCraft.InvertedFace": "Four souls of vengeful warriors are in this one item... Use them wisely"
 }

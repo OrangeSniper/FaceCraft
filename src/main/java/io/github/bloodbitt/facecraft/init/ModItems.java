@@ -3,6 +3,7 @@ package io.github.bloodbitt.facecraft.init;
 import io.github.bloodbitt.facecraft.FaceCraft;
 import io.github.bloodbitt.facecraft.blocks.BlockItemBase;
 import io.github.bloodbitt.facecraft.items.FlameApple;
+import io.github.bloodbitt.facecraft.items.InvertedFace;
 import io.github.bloodbitt.facecraft.items.ItemBase;
 import io.github.bloodbitt.facecraft.util.enums.FaceItemTier;
 import io.github.bloodbitt.facecraft.util.enums.ModArmorMaterial;
@@ -20,7 +21,7 @@ public class ModItems {
     //items
     public static final RegistryObject<Item> FACE = ITEMS.register("face", ItemBase::new);
     public static final RegistryObject<FlameApple> FLAME_APPLE = ITEMS.register("flame_apple", FlameApple::new);
-    public  static final RegistryObject<Item> INVERTED_FACE = ITEMS.register("inverted_face", ItemBase::new);
+    public static final RegistryObject<InvertedFace> INVERTED_FACE = ITEMS.register("inverted_face", () -> new InvertedFace(new Item.Properties().group(FaceCraft.TAB)));
 
     //tools
     public static final RegistryObject<SwordItem> FACE_SWORD = ITEMS.register("face_sword", () ->
