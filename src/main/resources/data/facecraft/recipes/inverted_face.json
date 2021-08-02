@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "pattern":
   [
-    " a ",
-    "afa",
-    " a "
+    " f ",
+    "faf",
+    " f "
   ],
   "key":
   {
@@ -20,6 +20,6 @@
   "result":
   {
     "item": "facecraft:inverted_face",
-    "count": 1
+    "count": 4
   }
 }
